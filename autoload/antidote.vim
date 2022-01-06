@@ -187,5 +187,3 @@ function! antidote#CommandAntidote(line_start, line_end)
 		return
 	endif	
 endfunction
-
-
