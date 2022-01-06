@@ -6,14 +6,14 @@ Antidote
 ==============================================================================
 CONTENTS                                                      *AntidoteContents*
 
-    1. Intro ............................................. |AntidoteIntro|
+    1. Overview .......................................... |AntidoteOverview|
     2. Configuration ..................................... |AntidoteConfig|
     3. Usage ............................................. |AntidoteUsage|
     6. License ........................................... |AntidoteLicense|
     7. Changelog ......................................... |AntidoteChangelog|
 
 ==============================================================================
-1. Intro                                                       *AntidoteIntro*
+1. Overview                                                   *AntidoteOverview*
 
 `Antidote` is a very complete proprietary dictionary application maintained and 
 distributed by the canadian company Druide. It can perform not only spell 
