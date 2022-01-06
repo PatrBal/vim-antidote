@@ -21,7 +21,7 @@ function! antidote#VisualAntidote()
 	let [line_end, column_end] = getpos("'>")[1:2]
 	let lines = getline(line_start, line_end)
 	if len(lines) == 0
-		echo "Houston, we have a problem which should not exist!"
+		echom "Houston, we have a problem which should not exist!"
 		return
 	endif
 	" Total number of lines
