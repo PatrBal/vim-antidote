@@ -2,12 +2,12 @@
 
 ## Description
 
-This plugin interfaces Vim with [Antidote.app][Antidote] for efficient spell cheking and grammar checking from inside Vim.
+This plugin interfaces Vim with [Antidote][Antidote] for efficient spell-checking and grammar checking from inside Vim.
 
 It provides a new :Antidote command and (recommended) mappings.
 
 WARNING: this version of `vim-antidote` is a Mac only plugin, so you will not benefit
-from using `vim-antidote` on Linux nor Windows. It can be installed on those systems
+from using `vim-antidote` on Linux nor Windows. It can be installed on those systems,
 however, but it will not load.
 
 ## Installation
