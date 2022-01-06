@@ -20,8 +20,9 @@ CONTENTS                                                    *AntidoteContents*
 1. Intro                                                       *AntidoteIntro*
 
 `Antidote` is a very complete proprietary dictionary application maintained and 
-distributed by the canadian company Druide. At the present time, it is limited 
-to the english and french languages only.
+distributed by the canadian company Druide. It can perform not only spell 
+checking, but also thorough grammar checking. At the present time, it is 
+limited to the english and french languages only.
 
 This plugin provides commands and mappings to interface Vim with Antidote.
 In particular, it makes it easy to spellcheck a part of a file only. It takes 
