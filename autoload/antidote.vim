@@ -107,44 +107,44 @@ function! antidote#VisualAntidote()
 	endif	
 endfunction
 
-function! antidote#NormalAntidote()
-	if &modified == 1
-		echo "Buffer has unsaved changes. Please, save before spellcheck!"
-		return
-	endif
-	let currentDir = expand('%:p:h')
-	let currentExt = expand('%:e')
-	if currentExt != ''
-		let currentExt = "." . currentExt
-	endif	  
-	let tempName = currentDir . "/tempfile" . currentExt
-	exe "silent w " . tempName
-	call system("osascript -e \'tell application \"" . g:antidote_application . "\" to quit\' ;
-					\ sleep 1 ;
-					\ open -a \"" . g:antidote_application . "\" " . tempName . " ; 
-					\ sleep 2 ;
-					\ osascript -e \'tell application \"System Events\"\' 
-					\ 			-e \'keystroke (ASCII character 29)\' 
-					\ 			-e \'keystroke \"k\" using command down\' 
-					\ 			-e \'delay 1\' 
-					\ 			-e \'keystroke \"k\" using command down\' 
-					\ 			-e \'end tell\'")
-	echo "Type <Enter> to apply spellcheck, and anything else to discard it: "
-	let char = getchar()
-	if nr2char(char) == ""
-		exe "silent %d|0r " . tempName
-		silent $d
-		exe "silent !rm " . tempName
-		redraw!
-		echom "Spellchek successfully applied!"
-		return
-	else
-		exe "silent !rm " . tempName
-		redraw!
-		echom "Spellchek discarded!"
-		return
-	endif
-endfunction
+" function! antidote#NormalAntidote()
+" 	if &modified == 1
+" 		echo "Buffer has unsaved changes. Please, save before spellcheck!"
+" 		return
+" 	endif
+" 	let currentDir = expand('%:p:h')
+" 	let currentExt = expand('%:e')
+" 	if currentExt != ''
+" 		let currentExt = "." . currentExt
+" 	endif	  
+" 	let tempName = currentDir . "/tempfile" . currentExt
+" 	exe "silent w " . tempName
+" 	call system("osascript -e \'tell application \"" . g:antidote_application . "\" to quit\' ;
+" 					\ sleep 1 ;
+" 					\ open -a \"" . g:antidote_application . "\" " . tempName . " ; 
+" 					\ sleep 2 ;
+" 					\ osascript -e \'tell application \"System Events\"\' 
+" 					\ 			-e \'keystroke (ASCII character 29)\' 
+" 					\ 			-e \'keystroke \"k\" using command down\' 
+" 					\ 			-e \'delay 1\' 
+" 					\ 			-e \'keystroke \"k\" using command down\' 
+" 					\ 			-e \'end tell\'")
+" 	echo "Type <Enter> to apply spellcheck, and anything else to discard it: "
+" 	let char = getchar()
+" 	if nr2char(char) == ""
+" 		exe "silent %d|0r " . tempName
+" 		silent $d
+" 		exe "silent !rm " . tempName
+" 		redraw!
+" 		echom "Spellchek successfully applied!"
+" 		return
+" 	else
+" 		exe "silent !rm " . tempName
+" 		redraw!
+" 		echom "Spellchek discarded!"
+" 		return
+" 	endif
+" endfunction
 
 function! antidote#CommandAntidote(line_start, line_end)
 	if &modified == 1
