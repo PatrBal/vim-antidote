@@ -68,6 +68,9 @@ visual modes.
 ==============================================================================
 6. License                                                   *AntidoteLicense*
 
+Copyright (c) Patrick Ballard.  Distributed under the same terms as Vim itself.
+See `:help license`.
+
 ==============================================================================
 7. Changelog                                               *AntidoteChangelog*
 
