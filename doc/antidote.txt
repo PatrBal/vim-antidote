@@ -38,7 +38,7 @@ Install `vim-antidote`
     vim -u NONE -c "helptags vim-antidote/doc" -c q
 
 ==============================================================================
-3. Interfacing Vim with Antidote                                  *AntidoteAn*
+3. Usage                                                         *AntidoteUsage*
 
 ------------------------------------------------------------------------------
 3.1. Spellchecking                                             *AntidoteSpell*
