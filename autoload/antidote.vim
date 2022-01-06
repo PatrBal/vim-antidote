@@ -122,7 +122,7 @@ function! antidote#CommandAntidote(line_start, line_end)
 	" load selection in a list of lines
 	let lines = getline(a:line_start, a:line_end)
 	if len(lines) == 0
-		echo "Houston, we have a problem which should not exist!"
+		echom "Houston, we have a problem which should not exist!"
 		return
 	endif
 	" Total number of lines
