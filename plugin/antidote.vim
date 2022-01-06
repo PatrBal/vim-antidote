@@ -15,20 +15,6 @@ if !has('unix') " macOS's vim, nvim and MacVim have this feature
 	finish
 endif
 
-" Get default browser
-" let g:defaultBrowser = system("defaults read ~/Library/Preferences/com.apple.LaunchServices/com.apple.launchservices.secure | awk -F\'\"\' \'/http;/{print window[(NR)-1]}{window[NR]=$2}\'")
-" if g:defaultBrowser =~ 'safari' || g:defaultBrowser == ''
-" 	"if Safari is the only Browser installed or if another Browser is installed and has never had a default Browser set, then by default nothing will be returned by the "defaults ..." command, and this means Safari is the default Browser
-" 	let g:defaultBrowser = 'Safari'
-" elseif g:defaultBrowser =~ 'chrome'
-" 	let g:defaultBrowser = 'Google Chrome'
-" elseif g:defaultBrowser =~ 'firefox'
-" 	let g:defaultBrowser = 'Firefox'
-" else
-" 	echom "Unknown default browser."
-" 	finish
-" endif
-
 
 " Antidote spellchecking
 vnoremap <silent> <Leader>an :<C-U>call antidote#VisualAntidote()<CR>
@@ -51,10 +37,3 @@ scriptencoding utf-8
 " (oddly "C-@" is referred to a <C-Space> in Vim)
 nnoremap <C-Space> "dyiw:call AntidoteDict(@d)<CR>
 vnoremap <C-Space> "dy:call AntidoteDict(@d)<CR>
-
-" Enable "alt-@" to call the definition of the current word in normal and visual modes
-" nnoremap • "dyiw:call AntidoteDict(@d)<CR>
-" vnoremap • "dy:call AntidoteDict(@d)<CR>
-" Enable "alt-shift-@" to call the conjugation of the current word in normal and visual modes
-" nnoremap Ÿ "dyiw:call AntidoteConjug(@d)<CR>
-" vnoremap Ÿ "dy:call AntidoteConjug(@d)<CR>
