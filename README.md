@@ -20,11 +20,10 @@ support:
     git clone https://github.com/PatrBal/vim-antidote
     vim -u NONE -c "helptags vim-antidote/doc" -c q
 
-
 ## Usage
- - :[range]Antidote
- - <Leader>an in visual or normal modes
- - <C-@> to call the definition of the current word under the cursor
+ - `:[range]Antidote`  where the default `[range]` is the whole buffer.
+ - `<Leader>an`  to run spellcheck in visual or normal modes
+ - `<C-@>` to call the definition of the current word under the cursor
 
 ## Features
  - Spellcheck of either the entire buffer or part of it.
