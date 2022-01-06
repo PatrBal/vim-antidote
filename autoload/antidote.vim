@@ -133,7 +133,7 @@ function! antidote#CommandAntidote(line_start, line_end)
 		let trailingNewline += 1
 	endwhile
 	if len(lines) == trailingNewline 
-		echo "Please, spellcheck something!"
+		echom "Please, spellcheck something!"
 		return
 	endif
 	" writing selection in temporary file
