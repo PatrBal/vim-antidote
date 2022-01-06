@@ -31,8 +31,6 @@ function! AntidoteConjug(word)
 	redraw!
 endfunction
 
-scriptencoding utf-8
-
 " Enable "C-@" to call the definition of the current word in normal and visual modes
 " (oddly "C-@" is referred to a <C-Space> in Vim)
 nnoremap <C-Space> "dyiw:call AntidoteDict(@d)<CR>
