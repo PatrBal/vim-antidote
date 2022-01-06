@@ -1,4 +1,6 @@
-*antidote.txt*                     Spellcheck with Antidote.app from inside Vim
+*antidote.txt*                       Grammar checking with Antidote.app from Vim
+antidote
+Antidote
 
 
 ==============================================================================
@@ -13,8 +15,6 @@ CONTENTS                                                    *AntidoteContents*
     5. Switching language ................................ |AntidoteSwitch|
     6. License ........................................... |AntidoteLicense|
     7. Changelog ......................................... |AntidoteChangelog|
-    8. Credits ........................................... |AntidoteCredits|
-
 
 ==============================================================================
 1. Intro                                                       *AntidoteIntro*
@@ -78,5 +78,3 @@ visual modes.
 26/12/2021 Add this documentation
 14/08/2018 Initial version
 
-==============================================================================
-8. Credits                                                   *AntidoteCredits*
