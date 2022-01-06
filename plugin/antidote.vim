@@ -3,6 +3,11 @@
 " License: MIT
 
 
+if &cp || exists("g:loaded_antidote")
+ finish
+endif
+let g:loaded_antidote = "1"
+
 if !exists('g:antidote_application')
 	let g:antidote_application = '/Applications/Antidote/Antidote 11.app'
 endif
