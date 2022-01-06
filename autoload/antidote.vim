@@ -6,7 +6,7 @@
 
 function! antidote#VisualAntidote()
 	if &modified == 1
-		echo "Buffer has unsaved changes. Please, save before spellchecking!"
+		echom "Buffer has unsaved changes. Please, save before spellchecking!"
 		return
 	endif
 	" first make the name of the tempfile (keeping the extension of the original file to inform Antidote)
