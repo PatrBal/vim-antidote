@@ -1,6 +1,7 @@
 " Description: Spelling and grammar checking with Antidote.app from Vim
-" Author: Patrick Ballard <patrick.ballard.paris@gmail.com>
-" License: MIT
+" Author:      Patrick Ballard <patrick.ballard.paris@gmail.com>
+" Last Change: 06/01/2022
+
 
 
 function! antidote#VisualAntidote()
