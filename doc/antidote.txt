@@ -7,7 +7,7 @@ Antidote
 CONTENTS                                                      *AntidoteContents*
 
     1. Overview .......................................... |AntidoteOverview|
-    2. Configuration ..................................... |AntidoteConfig|
+    2. Installation ...................................... |AntidoteInstall|
     3. Usage ............................................. |AntidoteUsage|
     6. License ........................................... |AntidoteLicense|
     7. Changelog ......................................... |AntidoteChangelog|
@@ -26,7 +26,7 @@ care to reimport in Vim all the corrections that have been validated in
 Antidote.
 
 ==============================================================================
-2. Installation
+2. Installation                                                *AntidoteInstall*
 
 Install `Antidote`
 * https://www.antidote.info/en
