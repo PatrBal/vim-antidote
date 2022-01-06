@@ -31,11 +31,6 @@ function! AntidoteDict(word)
 	redraw!
 endfunction
 
-function! AntidoteConjug(word)
-	call system("osascript -e \'tell application \"AgentAntidoteConnect\" to lance module dictionnaires ouvrage conjugaison mot \"" . a:word . "\"\'")
-	redraw!
-endfunction
-
 " Enable "C-@" to call the definition of the current word in normal and visual modes
 " (oddly "C-@" is referred to a <C-Space> in Vim)
 nnoremap <C-Space> "dyiw:call AntidoteDict(@d)<CR>
