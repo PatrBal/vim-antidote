@@ -1,4 +1,4 @@
-" Description: Spellcheck with Antidote.app from Vim
+" Description: Spelling and grammar checking with Antidote.app from Vim
 " Author: Patrick Ballard <patrick.ballard.paris@gmail.com>
 " License: MIT
 
