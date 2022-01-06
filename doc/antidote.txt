@@ -16,9 +16,9 @@ CONTENTS                                                      *AntidoteContents*
 1. Overview                                                   *AntidoteOverview*
 
 `Antidote` is a very complete proprietary dictionary application maintained and 
-distributed by the canadian company Druide. It can perform not only spell 
+distributed by the Canadian company Druide. It can perform not only spell 
 checking, but also thorough grammar checking. At the present time, it is 
-limited to the english and french languages only.
+limited to the English and French languages only.
 
 This plugin provides commands and mappings to interface Vim with Antidote.
 In particular, it makes it easy to spellcheck a part of a file only. It takes 
@@ -42,7 +42,7 @@ Install `vim-antidote`
 
 The following command:
 `:[range]Antidote`
-run spellcheking of the specified range of the current buffer in Antidote. 
+run spell-checking of the specified range of the current buffer in Antidote. 
 Validation of the suggested corrections is operated within `Antidote`. When 
 coming back to Vim the option of either importing or discarding the validated 
 corrections is proposed. If `[range]` is omitted, then the spellcheck is run 
@@ -53,7 +53,7 @@ One can also use the mapping:
 in either visual or normal mode. In visual mode, the spellcheck is run on the
 selection and in normal mode it is run on the whole file.
 
-The plugin also provides a mapping for calling easily the definition of the 
+The plugin also provides a mapping for easily calling the definition of the 
 current word under the cursor:
 `C-@` calls the definition in Antidote of the current word in both normal and 
 visual modes.
