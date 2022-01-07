@@ -4,7 +4,7 @@
 
 This plugin interfaces Vim with [Antidote][Antidote] for efficient spell-checking and grammar checking from inside Vim. `Antidote` is a very complete proprietary dictionary application maintained and distributed by the Canadian company Druide. It can perform not only spell checking, but also thorough grammar checking. `Antidote` can handle LaTeX and Markdown markup. At the present time, it is limited to the English and French languages only.
 
-It provides a new :Antidote command and (recommended) mappings.
+The plugin provides a new :Antidote command and (recommended) mappings.
 
 WARNING: this version of `vim-antidote` is a Mac only plugin, so you will not benefit
 from using `vim-antidote` on Linux nor Windows. It can be installed on those systems,
