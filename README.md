@@ -31,7 +31,7 @@ support:
  - Show definition in Antidote of the current word.
 
 ## Open task
- - [ ] Add support for Windows and Linux
+[ ] Add support for Windows and Linux
 
 
 ## License
