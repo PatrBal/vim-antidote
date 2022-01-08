@@ -30,7 +30,7 @@ support:
  - Validated corrections in Antidote are reimported in Vim.
  - Show definition in Antidote of the current word.
 
-## Open tasks
+## Open task
  - [ ] Add support for Windows and Linux
 
 
