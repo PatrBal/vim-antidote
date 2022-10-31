@@ -21,10 +21,8 @@ if !has('unix') " macOS's vim, nvim and MacVim have this feature
 endif
 
 
-" Antidote spellchecking
+" Define command for Antidote spellchecking
 command -range=% Antidote call antidote#CommandAntidote(<line1>,<line2>)
-vnoremap <silent> <Leader>an :<C-U>call antidote#VisualAntidote()<CR>
-nnoremap <silent> <Leader>an :Antidote<CR>
 
 function! AntidoteDict(word)
 	call system("osascript -e \'tell application \"AgentAntidoteConnect\" to lance module dictionnaires ouvrage definitions mot \"" . a:word . "\"\'")
