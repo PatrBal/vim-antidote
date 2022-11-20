@@ -33,5 +33,7 @@ endfunction
 
 " Enable "C-@" to call the definition of the current word in normal and visual modes
 " (oddly "C-@" is referred to a <C-Space> in Vim)
-nnoremap <C-Space> "dyiw:call AntidoteDict(@d)<CR>
-vnoremap <C-Space> "dy:call AntidoteDict(@d)<CR>
+nnoremap <C-Space> ":call AntidoteDict(<cword>)<CR>
+vnoremap <C-Space> :call AntidoteDict(<cword>)<CR>
+" nnoremap <C-Space> "dyiw:call AntidoteDict(@d)<CR>
+" vnoremap <C-Space> "dy:call AntidoteDict(@d)<CR>
