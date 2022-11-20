@@ -31,9 +31,21 @@ function! AntidoteDict(word)
 	redraw!
 endfunction
 
+function! s:AntidoteDictVisual(type)
+	let saved_unnamed_register = @@
+	if a:type ==#'v'
+		normal! `<v`>y
+	else
+		return
+	endif
+	call system("osascript -e \'tell application \"AgentAntidoteConnect\" to lance module dictionnaires ouvrage definitions mot \"" . @@ . "\"\'")
+	let@@ = saved_unnamed_register
+endfunction
+
+nnoremap <C-@> :call <SID>AntidoteDict(expand('<cword>'))<CR>
+vnoremap <C-@> :<C-U>call <SID>AntidoteDictVisual(visualmode())<CR>
+
 " Enable "C-@" to call the definition of the current word in normal and visual modes
 " (oddly "C-@" is referred to a <C-Space> in Vim)
-nnoremap <C-@> :call AntidoteDict(expand('<cword>'))<CR>
-vnoremap <C-@> y:<C-U>call AntidoteDict(@@)<CR>
 " nnoremap <C-Space> "dyiw:call AntidoteDict(@d)<CR>
 " vnoremap <C-Space> "dy:call AntidoteDict(@d)<CR>
