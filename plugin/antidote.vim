@@ -42,8 +42,8 @@ function! s:AntidoteDictVisual(type)
 	let@@ = saved_unnamed_register
 endfunction
 
-nnoremap <C-@> :call <SID>AntidoteDict(expand('<cword>'))<CR>
-vnoremap <C-@> :<C-U>call <SID>AntidoteDictVisual(visualmode())<CR>
+nnoremap <silent> <C-@> :call <SID>AntidoteDict(expand('<cword>'))<CR>
+vnoremap <silent> <C-@> :<C-U>call <SID>AntidoteDictVisual(visualmode())<CR>
 
 " Enable "C-@" to call the definition of the current word in normal and visual modes
 " (oddly "C-@" is referred to a <C-Space> in Vim)
