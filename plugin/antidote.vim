@@ -26,7 +26,7 @@ command -range=% Antidote call antidote#CommandAntidote(<line1>,<line2>)
 vnoremap <silent> <Leader>an :<C-U>call antidote#VisualAntidote()<CR>
 nnoremap <silent> <Leader>an :Antidote<CR>
 
-function! AntidoteDict(word)
+function! s:AntidoteDict(word)
 	call system("osascript -e \'tell application \"AgentAntidoteConnect\" to lance module dictionnaires ouvrage definitions mot \"" . a:word . "\"\'")
 	redraw!
 endfunction
