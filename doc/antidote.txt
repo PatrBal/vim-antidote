@@ -29,7 +29,7 @@ Antidote.
 2. Installation                                                *AntidoteInstall*
 
 Install `Antidote`
-* https://www.antidote.info/en
+|https://www.antidote.info/en|
 
 Install `vim-antidote`
     mkdir -p ~/.vim/pack/PatrBal/start
