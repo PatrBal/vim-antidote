@@ -39,7 +39,7 @@ function! s:AntidoteDictVisual(type)
 		return
 	endif
 	call system("osascript -e \'tell application \"AgentAntidoteConnect\" to lance module dictionnaires ouvrage definitions mot \"" . @@ . "\"\'")
-	let@@ = saved_unnamed_register
+	let @@ = saved_unnamed_register
 endfunction
 
 nnoremap <silent> <C-@> :call <SID>AntidoteDict(expand('<cword>'))<CR>
