@@ -16,7 +16,8 @@ if empty(glob(g:antidote_application))
 	finish
 endif
 
-if !has('unix') " macOS's vim, nvim and MacVim have this feature
+""" Do not load if the system is not macOS
+if !(has('unix') && system('uname') =~? 'Darwin')
 	finish
 endif
 
