@@ -50,9 +50,9 @@ function! antidote#VisualAntidote()
 	let lines[0] = lines[0][column_start - 1:]
 	call writefile(lines, tempName, 'b')
 	" Reselect the original selection
-	exe "cal cursor( " . line_start . " , " .  column_start . ")"
+	execute "cal cursor( " . line_start . " , " .  column_start . ")"
 	normal v
-	exe "cal cursor( " . line_end . " , " .  column_end . ")"
+	execute "cal cursor( " . line_end . " , " .  column_end . ")"
 	" start Antidote and start corrector
 	call system("osascript -e \'tell application \"" . g:antidote_application . "\" to quit\' ;
 					\ sleep 1 ;
@@ -69,7 +69,7 @@ function! antidote#VisualAntidote()
 	if nr2char(char) ==# ''
 		" paste the corrected text in the original selection. Special attention must be paid to the boundaries. 
 		" paste corrected text in to register x
-		exe 'let @x = join(readfile("' . tempName . '"), "\n")'
+		execute 'let @x = join(readfile("' . tempName . '"), "\n")'
 		if trailingNewline >= 0
 			let @x = @x . "\n"
 			if trailingNewline >= 1
@@ -92,15 +92,15 @@ function! antidote#VisualAntidote()
 		if lastChar == "true" && totalLines == line_end
 			normal! Gdd
 		endif
-		exe "silent !rm " . tempName
-		exe "cal cursor( " . line_end . " , " .  column_end . ")"
+		execute "silent !rm " . tempName
+		execute "cal cursor( " . line_end . " , " .  column_end . ")"
 		redraw!
 		echom "Spellchek applied successfully!"
 		return 
 	else
 		" discard corrected text
-		exe "normal! \<Esc>"
-		exe "silent !rm " . tempName
+		execute "normal! \<Esc>"
+		execute "silent !rm " . tempName
 		redraw!
 		echom "Spellchek discarded!"
 		return
@@ -139,9 +139,9 @@ function! antidote#CommandAntidote(line_start, line_end)
 	" writing selection in temporary file
 	call writefile(lines, tempName, 'b')
 	" Reselect the original selection
-	exe "cal cursor( " . a:line_start . " , " . "1 )"
+	execute "cal cursor( " . a:line_start . " , " . "1 )"
 	normal! V
-	exe "cal cursor( " . a:line_end . " , " . "1 )"
+	execute "cal cursor( " . a:line_end . " , " . "1 )"
 	" start Antidote and start corrector
 	call system("osascript -e \'tell application \"" . g:antidote_application . "\" to quit\' ;
 					\ sleep 1 ;
@@ -158,7 +158,7 @@ function! antidote#CommandAntidote(line_start, line_end)
 	if nr2char(char) == ""
 		" paste the corrected text in the original selection. Special attention must be paid to the boundaries. 
 		" paste corrected text in to register x
-		exe 'let @x = join(readfile("' . tempName . '"), "\n")'
+		execute 'let @x = join(readfile("' . tempName . '"), "\n")'
 		if trailingNewline >= 0
 			let @x = @x . "\n"
 			if trailingNewline >= 1
@@ -172,16 +172,16 @@ function! antidote#CommandAntidote(line_start, line_end)
 		if totalLines == a:line_end
 			normal! Gdd
 		endif
-		exe "silent !rm " . tempName
-		exe "cal cursor( " . a:line_end . " , 1 )"
+		execute "silent !rm " . tempName
+		execute "cal cursor( " . a:line_end . " , 1 )"
 		redraw!
 		echom "Spellchek applied successfully!"
 		return 
 	else
 		" discard corrected text
-		exe "normal! \<Esc>"
-		exe "silent !rm " . tempName
-		exe "cal cursor( " . a:line_end . " , 1 )"
+		execute "normal! \<Esc>"
+		execute "silent !rm " . tempName
+		execute "cal cursor( " . a:line_end . " , 1 )"
 		redraw!
 		echom "Spellchek discarded!"
 		return
