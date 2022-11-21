@@ -10,7 +10,7 @@ function! antidote#VisualAntidote()
 		return
 	endif
 	" first make the name of the tempfile (keeping the extension of the original file to inform Antidote)
-	let currentDir = expand('%:p:h')
+	let currentDir = fnameescape(expand('%:p:h'))
 	let currentExt = expand('%:e')
 	if currentExt != ''
 		let currentExt = "." . currentExt
