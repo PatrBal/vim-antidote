@@ -32,7 +32,7 @@ Install `Antidote`
 * https://www.antidote.info/en
 
 Install `vim-antidote`
-	mkdir -p ~/.vim/pack/PatrBal/start
+    mkdir -p ~/.vim/pack/PatrBal/start
     cd ~/.vim/pack/PatrBal/start
     git clone https://github.com/PatrBal/vim-antidote
     vim -u NONE -c "helptags vim-antidote/doc" -c q
