@@ -1,6 +1,6 @@
 " Description: Spelling and grammar checking with Antidote.app from Vim
 " Author:      Patrick Ballard <patrick.ballard.paris@gmail.com>
-" Last Change: 06/01/2022
+" Last Change: 21/11/2022
 
 
 if &cp || exists("g:loaded_antidote")
