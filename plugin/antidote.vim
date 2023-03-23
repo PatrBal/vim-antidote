@@ -41,6 +41,7 @@ function! s:AntidoteDictVisual(type)
 		return
 	endif
 	call system("osascript -e \'tell application \"AgentAntidoteConnect\" to lance module dictionnaires ouvrage definitions mot \"" . @@ . "\"\'")
+	call system("osascript -e \'tell application \"System Events\" to tell application process \"Antidote 11\" to set frontmost to true\'")
 	let @@ = saved_unnamed_register
 endfunction
 
