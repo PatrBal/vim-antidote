@@ -28,7 +28,7 @@ vnoremap <silent> <Leader>an :<C-U>call antidote#VisualAntidote()<CR>
 nnoremap <silent> <Leader>an :Antidote<CR>
 
 function! s:AntidoteDict(word)
-	call system("osascript -e \'tell application \"AgentAntidoteConnect\" to lance module dictionnaires ouvrage definitions mot \"" . a:word . "\"\'")
+	call system("osascript -e \'tell application \"AgentAntidoteConnect\" to lance module dictionnaires ouvrage definitions mot \"" . a:word . "\"\' - e \'tell application \"Antidote\" to activate\'")
 	redraw!
 endfunction
 
