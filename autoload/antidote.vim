@@ -59,6 +59,7 @@ function! antidote#VisualAntidote()
 					\ open -a \"" . g:antidote_application . "\" " . tempName . " ; 
 					\ sleep 2 ;
 					\ osascript -e \'tell application \"System Events\"\' 
+					\     		-e \'tell application process \"Antidote 11\" to set frontmost to true\' 
 					\ 			-e \'keystroke (ASCII character 29)\' 
 					\ 			-e \'keystroke \"k\" using command down\' 
 					\ 			-e \'delay 1\' 
