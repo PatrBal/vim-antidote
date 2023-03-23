@@ -30,7 +30,8 @@ nnoremap <silent> <Leader>an :Antidote<CR>
 function! s:AntidoteDict(word)
 	call system("osascript -e \'tell application \"AgentAntidoteConnect\" to lance module dictionnaires ouvrage definitions mot \"" . a:word . "\"\'")
 	redraw!
-	call system("osascript -e \'tell application \"System Events\" to tell application process \"Antidote 11\" to set frontmost to true\'")
+	execute !osascript -e 'tell application "System Events" to tell application process "Antidote 11" to set frontmost to true'
+	" call system("osascript -e \'tell application \"System Events\" to tell application process \"Antidote 11\" to set frontmost to true\'")
 endfunction
 
 function! s:AntidoteDictVisual(type)
